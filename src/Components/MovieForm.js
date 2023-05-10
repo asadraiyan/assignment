@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-const Form = ({ moviedata }) => {
+const MovieForm = ({ moviedata }) => {
 
     const initialState = {
         movieName: moviedata ? moviedata?.show?.name : "",
@@ -63,4 +63,4 @@ const Form = ({ moviedata }) => {
     )
 }
 
-export default Form
+export default MovieForm

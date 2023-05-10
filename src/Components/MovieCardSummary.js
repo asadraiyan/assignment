@@ -3,7 +3,7 @@ import { FcRating } from "react-icons/fc";
 import { useNavigate } from "react-router-dom"
 
 
-const CardSummary = ({ moviedata }) => {
+const MovieCardSummary = ({ moviedata }) => {
     const navigate = useNavigate()
     const handleButton = () => {
         navigate("/movie-form")
@@ -25,7 +25,7 @@ const CardSummary = ({ moviedata }) => {
                 <div className="desc-container">
                     <p className='title'>{movie?.show?.name}</p>
                     <p className='rating'>Rating: {movie?.show?.rating.average} <FcRating /></p>
-                    <h3 className='top'>Genres: <span className='genre'> {movie?.show?.genres} </span></h3>
+                    <span><span className='font-weight'>Genres: </span>{movie.show?.genres}</span>
                     <p className='summary'>{movie?.show?.summary}</p>
                     <button className='button' onClick={handleButton}>Book a Ticket</button>
                 </div>
@@ -35,4 +35,4 @@ const CardSummary = ({ moviedata }) => {
     )
 }
 
-export default CardSummary
+export default MovieCardSummary

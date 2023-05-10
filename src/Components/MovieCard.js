@@ -4,7 +4,7 @@ import { FcRating } from "react-icons/fc";
 
 
 
-const Card = ({ setMoviedata }) => {
+const MovieCard = ({ setMoviedata }) => {
     const [users, setUsers] = useState([])
     const navigate = useNavigate()
 
@@ -55,4 +55,4 @@ const Card = ({ setMoviedata }) => {
     )
 }
 
-export default Card
+export default MovieCard
