@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Card from './Components/Card';
+import CardSummary from './Components/CardSummary';
+import { BrowserRouter as Router, Route, Routes, } from "react-router-dom";
+import Form from './Components/Form';
 
 function App() {
+
+  const [moviedata, setMoviedata] = useState()
+  console.log("data", moviedata)
+
+  useEffect(() => {
+    const localData = JSON.parse(localStorage.getItem("movieData"))
+    setMoviedata(localData || "")
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Card setMoviedata={setMoviedata} />} />
+          <Route exact path="/movie-detail" element={<CardSummary moviedata={moviedata} />} />
+          <Route exact path="/movie-form" element={<Form moviedata={moviedata} />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

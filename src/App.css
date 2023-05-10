@@ -1,38 +1,205 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300&family=Satisfy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.main-heading {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+}
+
+.heading {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-wrapper {
+  display: flex;
+  /* border: 2px solid blue; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Card content css starts from here */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
+  border: 1px solid grey;
+  width: 275px;
+  height: 450px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img {
+  width: 275px;
+  height: 300px;
+  border-radius: 5px;
+  /* border: 2px solid red; */
+}
+
+.card-body {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 5px;
+}
+
+.card-title {
+  font-size: 23px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+.font-weight {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.link-container {
+  text-decoration: none;
+  color: black;
+}
+
+.movie-detail {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.box-container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+.img-box,
+.box-img {
+  /* border: 2px solid blue; */
+  width: 350px;
+  height: 375px;
+}
+
+.desc-container {
+  /* border: 2px solid yellow; */
+  width: 600px;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  padding: 5px;
+
+}
+
+.title {
+  font-size: 35px;
+
+}
+
+.genre {
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 100;
+}
+
+.summary {
+  font-size: 20px;
+  color: grey;
+  margin-top: 15px;
+}
+
+.top {
+  margin-top: 15px;
+}
+
+.rating {
+  font-weight: bolder;
+}
+
+.button {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 8px 5px 15px;
+  background-color: #0d6efd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.person-name {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.first-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.last-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 2px solid red;
+}
+
+/* .billing-container {
+  border: 2px solid red;
+} */
+
+.form-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 400px;
 }
