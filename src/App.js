@@ -8,7 +8,7 @@ import MovieForm from './Components/MovieForm';
 function App() {
 
   const [moviedata, setMoviedata] = useState()
-  console.log("data", moviedata)
+  // console.log("data", moviedata)
 
   useEffect(() => {
     const localData = JSON.parse(localStorage.getItem("movieData"))
