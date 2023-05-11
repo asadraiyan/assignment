@@ -117,7 +117,7 @@
   /* border: 2px solid yellow; */
   width: 600px;
   font-family: 'Poppins', sans-serif;
-  margin-right: 40px;
+  /* margin-right: 40px; */
   margin-bottom: 10px;
   padding: 5px;
 
@@ -172,4 +172,77 @@
   flex-direction: column;
   margin: auto;
   width: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .box-container {
+    flex-direction: column;
+  }
+
+  .desc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+  .desc-container {
+    width: fit-content;
+  }
+
+  .summary {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
+  .img-box,
+  .box-img {
+
+    width: 325px;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .summary {
+    font-size: 17px;
+  }
+
+  .img-box,
+  .box-img {
+
+    width: 275px;
+    height: 300px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .card-container {
+
+    width: 275px;
+    height: 425px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .font-weight {
+    font-size: 15px;
+  }
+
+  .form {
+    width: 300px
+  }
 }
