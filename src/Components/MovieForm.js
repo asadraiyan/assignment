@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 
 
 const MovieForm = ({ moviedata }) => {
@@ -10,16 +11,30 @@ const MovieForm = ({ moviedata }) => {
         phone: "",
         email: "",
     }
+    const navigate = useNavigate()
+    // console.log("moviedata", moviedata)
+    // console.log("initialstate", initialState)
 
     const localData = JSON.parse(localStorage.getItem("userData"))
-    console.log("local data =", localData)
+    // console.log("local data =", localData)
 
-    const [formData, setFormData] = useState(localData || initialState)
+    const [formData, setFormData] = useState(() => localData ? localData : initialState)
+    // console.log("form data =", formData)
+
 
     const handleSubmitTicket = (e) => {
         e.preventDefault();
-        console.log("form data =", formData)
-        localStorage.setItem("userData", JSON.stringify(formData))
+
+        if (formData.userName === "" || formData.phone === "" || formData.email === "") {
+            alert("Please fill all the details")
+        }
+        else {
+            alert("Your ticket is confirmed")
+            localStorage.setItem("userData", JSON.stringify(formData))
+            navigate("/")
+        }
+
+
     }
 
     const change = (e) => {

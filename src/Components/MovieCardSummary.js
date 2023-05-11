@@ -14,7 +14,7 @@ const MovieCardSummary = ({ moviedata }) => {
 
     const movie = localData ? localData : moviedata
 
-    console.log("localData =", localData)
+    // console.log("localData =", localData)
 
     return (
         <>
